@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promedios ITS</title>
+    <link rel="stylesheet" href="./../global/output.css" />
+    <script src="./../global/jquery.js" defer></script>
+    <script src="./script.js" defer></script>
+  </head>
+  <body class="grid h-screen place-items-center">
+    <div
+      class="relative mx-auto flex w-full flex-col gap-6 py-16 px-4 sm:px-8 md:max-w-2xl lg:max-w-4xl"
+    >
+      <h1 class="text-6xl font-black uppercase">Promedios</h1>
+      <form
+        class="relative z-10 grid w-full grid-cols-1 gap-y-4 border border-gray-300 px-6 py-10 shadow-md md:grid-cols-2 md:gap-x-4 lg:gap-x-8"
+      >
+        <!-- inputs -->
+        <div class="flex flex-col md:col-span-full md:col-start-1">
+          <label for="estudiante" class="font-semibold">Estudiante:</label>
+          <input
+            type="text"
+            id="estudiante"
+            placeholder="Pepe de León..."
+            class="border-gray-400"
+          />
+          <small data-visible="false" id="error-estudiante">
+            El nombre es obligatorio.
+          </small>
+        </div>
+        <div class="flex flex-col">
+          <label for="practico" class="font-semibold">Nota de Practico:</label>
+          <input
+            type="number"
+            id="practico"
+            placeholder="4..."
+            min="1"
+            max="12"
+            class="border-gray-400"
+          />
+          <small data-visible="false" id="error-practico">
+            La nota tiene que estar entre 1 - 12.
+          </small>
+        </div>
+        <div class="flex flex-col">
+          <label for="oral" class="font-semibold">Nota de Oral:</label>
+          <input
+            type="number"
+            id="oral"
+            placeholder="8..."
+            min="1"
+            max="12"
+            class="border-gray-400"
+          />
+          <small data-visible="false" id="error-oral">
+            La nota tiene que estar entre 1 - 12.
+          </small>
+        </div>
+        <div class="flex flex-col">
+          <label for="escrito" class="font-semibold">Nota de Escrito:</label>
+          <input
+            type="number"
+            id="escrito"
+            placeholder="6..."
+            min="1"
+            max="12"
+            invalid="true"
+            class="border-gray-400"
+          />
+          <small data-visible="false" id="error-escrito">
+            La nota tiene que estar entre 1 - 12.
+          </small>
+        </div>
+
+        <!-- botones -->
+        <div
+          class="mt-2 flex flex-col gap-2 sm:flex-row md:col-span-full md:col-start-1 md:mt-8 md:gap-4 lg:gap-8"
+        >
+          <button
+            type="button"
+            id="btn-aceptar"
+            class="cta w-full bg-indigo-500 py-2 font-black uppercase tracking-widest text-white sm:py-3"
+          >
+            Aceptar
+          </button>
+          <button
+            type="button"
+            id="btn-limpiar"
+            class="cta w-full border-2 border-indigo-500 bg-white py-2 font-black uppercase tracking-widest text-indigo-500 sm:py-3"
+          >
+            Limpiar
+          </button>
+        </div>
+      </form>
+
+      <h4 class="text-2xl font-bold" id="resultado">...</h4>
+    </div>
+  </body>
+</html>

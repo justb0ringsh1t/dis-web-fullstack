@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+
+* {
+  @apply text-gray-900;
+}
+
+@tailwind utilities;
+
+input:is([type='text'], [type='number']) {
+  @apply focus:border-indigo-500 focus:ring-indigo-500;
+}
+
+small {
+  @apply transform text-xs text-red-500 transition-all;
+}
+
+small[data-visible='true'] {
+  @apply translate-x-0 opacity-100;
+}
+
+small[data-visible='false'] {
+  @apply -translate-x-full transform opacity-0 transition-none;
+}
+
+.cta {
+  @apply transform transition-all hover:-translate-y-1 hover:shadow-md;
+}
