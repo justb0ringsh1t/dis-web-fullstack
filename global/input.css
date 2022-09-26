@@ -7,7 +7,7 @@
 
 @tailwind utilities;
 
-input:is([type='text'], [type='number']) {
+input:is([type='text'], [type='number'], [type='datetime-local'], [type='file']) {
   @apply focus:border-indigo-500 focus:ring-indigo-500;
 }
 

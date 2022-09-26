@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Horas</title>
+    <link rel="stylesheet" href="./../global/output.css" />
+
+    <style>
+      tr,
+      th,
+      td {
+        border: 1px solid #4b5563;
+        padding: 1em;
+      }
+
+      .imagen-funcionario {
+        padding: 0;
+        object-fit: cover;
+        width: 64px;
+      }
+    </style>
+
+    <script src="./../global/jquery.js"></script>
+    <script src="./script.js"></script>
+  </head>
+  <body class="container mx-auto px-4">
+    <h1 class="py-8 text-5xl font-black md:text-6xl">Horas de Funcionarios</h1>
+
+    <!-- form -->
+    <form
+      id="form"
+      class="grid gap-4 border border-gray-600 py-6 px-4 shadow-md md:grid-cols-2"
+    >
+      <div class="flex flex-col md:col-span-full">
+        <label for="foto" class="font-semibold">Foto:</label>
+        <input type="file" id="foto" required />
+      </div>
+
+      <div class="flex flex-col">
+        <label for="nombre" class="font-semibold">Nombre:</label>
+        <input type="text" id="nombre" required />
+      </div>
+
+      <div class="flex flex-col">
+        <label for="apellido" class="font-semibold">Apellido:</label>
+        <input type="text" id="apellido" required />
+      </div>
+
+      <div class="flex flex-col">
+        <label for="entrada" class="font-semibold">Hora de Entrada:</label>
+        <input type="datetime-local" id="entrada" required />
+      </div>
+
+      <div class="flex flex-col">
+        <label for="salida" class="font-semibold">Hora de Salida:</label>
+        <input type="datetime-local" id="salida" required />
+      </div>
+
+      <div class="mt-6 flex flex-col gap-4 md:col-span-full md:flex-row">
+        <button
+          type="submit"
+          class="cta w-full bg-indigo-500 py-2 px-4 font-bold uppercase text-white"
+        >
+          Aceptar
+        </button>
+        <button
+          type="reset"
+          class="cta w-full border-2 border-indigo-500 py-2 px-4 font-bold uppercase text-indigo-500"
+        >
+          Limpiar
+        </button>
+      </div>
+    </form>
+
+    <table class="border-collaps my-8 w-full shadow-md">
+      <thead>
+        <tr>
+          <th>Foto</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th class="hidden md:table-cell">H. Entrada</th>
+          <th class="hidden md:table-cell">H. Salida</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody id="tabla"></tbody>
+    </table>
+  </body>
+</html>

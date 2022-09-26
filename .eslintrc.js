@@ -4,7 +4,7 @@ module.exports = {
     es2021: true,
     jquery: true
   },
-  extends: ['airbnb-base', 'prettier'],
+  extends: ['prettier'],
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module'
