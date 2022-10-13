@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+#form {
+  max-width: 300px;
+  display: flex;
+  flex-flow: column;
+  gap: 2em;
+  border: 1px solid #bbbbbb;
+  padding: 3em 1em;
+  padding-top: 1em;
+}
+
+.input__wrapper {
+  display: flex;
+  flex-flow: column;
+  gap: 1em;
+}
+
+.input__wrapper--horizontal {
+  display: flex;
+  gap: 1em;
+}
+
+.input {
+  flex: 1;
+}
+
+.form-controller {
+  display: flex;
+  flex-flow: column;
+  gap: 0.5em;
+}
+
+.form__wrapper {
+  display: flex;
+  flex-flow: column;
+  gap: 1em;
+}
+
+#error {
+  color: red;
+}
+
+.container {
+  display: flex;
+  padding: 2em;
+  gap: 1em;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  max-width: 200px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  height: min-content;
+}
+
+.dia {
+  display: flex;
+  width: min-content;
+  height: min-content;
+  align-items: center;
+  gap: 1em;
+  font-size: 12px;
+  border: 1px solid #bbbbbb;
+  background-color: #eeeeee;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.dia:hover {
+  filter: brightness(90%);
+}
+
+.mas-lluviosos {
+  color: gray;
+}
+
+.menos-lluviosos {
+  color: gray;
+}
+
+.dias-lluvia {
+  color: gray;
+}
+
+.dia__fecha {
+  flex: 1;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    flex-flow: column;
+  }
+}

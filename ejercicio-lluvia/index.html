@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lluvia</title>
+
+    <link rel="stylesheet" href="./styles.css" />
+
+    <script src="./../global/jquery.js"></script>
+    <script src="./script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <ul id="dias"></ul>
+      <div class="form__wrapper">
+        <form id="form">
+          <h1 class="form__title">Registro Pluviometrico</h1>
+          <div class="input__wrapper">
+            <label for="fecha" class="input__label">Dia:</label>
+            <input
+              type="number"
+              id="fecha"
+              min="1"
+              max="31"
+              class="input"
+              required
+              placeholder="Dia del mes..."
+            />
+          </div>
+
+          <!-- <div id="dias">
+            <ul></ul>
+          </div> -->
+
+          <div class="input__wrapper">
+            <label for="acumulacion" class="input__label"
+              >Acumulacion de agua por hora:</label
+            >
+            <input
+              type="number"
+              id="acumulacion"
+              min="0"
+              class="input"
+              required
+              placeholder="Acumulacion de agua en mm/h..."
+            />
+          </div>
+
+          <div class="form-controller">
+            <button type="submit">Agregar</button>
+            <button type="button" id="finalizar" disabled>Finalizar</button>
+          </div>
+        </form>
+        <p id="error"></p>
+      </div>
+      <div id="resultado">
+        Esperando datos...
+      </ul>
+    </div>
+  </body>
+</html>
